@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.braiansilva.workshopmongo.domain.Post;
 import com.braiansilva.workshopmongo.domain.User;
 import com.braiansilva.workshopmongo.dto.UserDTO;
 import com.braiansilva.workshopmongo.services.UserService;
@@ -60,6 +61,13 @@ public class UserResource {
 		obj = service.update(obj);
 		
 		return ResponseEntity.noContent().build();
+	}
+	
+	@GetMapping("/{id}/posts")
+	public ResponseEntity<List<Post>> findPosts(@PathVariable String id){
+		User obj = service.findById(id);	
+				
+		return ResponseEntity.ok().body(obj.getPosts());
 	}
 	
 }
