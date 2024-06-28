@@ -12,7 +12,6 @@ import com.braiansilva.workshopmongo.domain.Post;
 import com.braiansilva.workshopmongo.domain.User;
 import com.braiansilva.workshopmongo.dto.AuthorDTO;
 import com.braiansilva.workshopmongo.dto.CommentDTO;
-import com.braiansilva.workshopmongo.repositories.CommentRepository;
 import com.braiansilva.workshopmongo.repositories.PostRepository;
 import com.braiansilva.workshopmongo.repositories.UserRepository;
 
